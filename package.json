@@ -1,12 +1,36 @@
 {
-  "name": "pnpm-syncpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "gonfalon",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Yes.",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "check-dependencies": "syncpack lint"
   },
-  "keywords": [],
-  "author": "Ludovic Sterlin",
-  "license": "ISC"
+  "devDependencies": {
+    "syncpack": "14.0.0-alpha.19"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "not IE 11"
+  ],
+  "engineStrict": true,
+  "engines": {
+    "node": ">= 10.17.0 <23",
+    "yarn": ">=4.7.0"
+  },
+  "resolutions": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-is": "19.0.0",
+    "@emotion/react": "11.14.0",
+    "@types/react": "19.0.1",
+    "immutable": "4.0.0-rc.12",
+    "clsx": "2.1.1",
+    "vite": "6.3.5"
+  },
+  "packageManager": "pnpm@10.14.0"
 }
